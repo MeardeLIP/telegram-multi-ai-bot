@@ -1,0 +1,20 @@
+[Unit]
+Description=GPT Bot Telegram Bot
+After=network.target postgresql.service redis-server.service gptbot-api.service
+Requires=postgresql.service redis-server.service
+
+[Service]
+Type=simple
+User=gptbot
+Group=gptbot
+WorkingDirectory=/opt/gptbot
+Environment="PATH=/opt/gptbot/venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/opt/gptbot/venv/bin/python -m app.bot.main
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
