@@ -28,3 +28,29 @@ __dummy__.ipynb
 # OS
 Thumbs.db
 .DS_Store
+
+# Витрина GitHub: полный проект остаётся локально — не коммитить снова
+/app/
+/scripts/
+/jobs/
+/logs/
+/pipecat/
+**/*.py
+**/*.sh
+**/*.bat
+Dockerfile*
+docker-compose*.yml
+alembic.ini
+requirements.txt
+.cursorrules
+/docs/ORIGINAL_README.md
+/docs/LINUX_SETUP.md
+/photo_*.jpg
+/hailuo.png
+/kling.png
+/sora2.png
+/start.png
+/КРИТИЧЕСКИЕ_ПРАВИЛА.md
+/работа с аудио.png
+/создание фото.png
+*.service
